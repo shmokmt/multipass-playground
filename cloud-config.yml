@@ -1,0 +1,16 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - git
+  - curl
+  - vim
+  - nginx
+
+runcmd:
+  - echo "Hello, world!" > /etc/motd
+  - apt-get -y install nginx
+  - systemctl enable nginx
+  - systemctl start nginx
+
+final_message: "The system is finally up, after $UPTIME seconds"
