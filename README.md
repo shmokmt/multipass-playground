@@ -23,7 +23,7 @@ ubuntu@ubuntu-instance:~$ hostname -I | awk '{print $1}'
 ## Debugging
 
 Look in `/var/log/cloud-init-output.log`.
-It Captures the output from each stage of cloud-init when it runs.
+It captures the output from each stage of cloud-init when it runs.
 
 # References
 
